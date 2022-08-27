@@ -96,7 +96,21 @@ return (
             </List>
         </Box>
         <Divider color = "gray.800"/>
-        <Box height = "66%" overflowY = "auto" padding Y = "20px"></Box>
+        <Box height = "60%" overflowY = "auto" padding Y = "20px">
+            <List spacing = {2}>
+                {playlists.map(playlist => (
+                    <ListItem paddingX = "20px" key = {playlist}>
+                        <LinkBox>
+                        <NextLink href = "/" passHref>
+                            <LinkOverlay>
+                            {playlist}
+                            </LinkOverlay>
+                        </NextLink>
+                        </LinkBox>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
     </Box>
     </Box>
 )
